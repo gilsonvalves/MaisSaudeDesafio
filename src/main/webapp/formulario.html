@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Cadastramento de Medico</title>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet"
+	href="materialize/css/materialize.min.css" media="screen,projection" />
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style/styleCss.css" />
+</head>
+<body>
+	<header>
+		<nav class="menu">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">Cadastro de médicos:</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="/login.html" class="waves-effect waves-light btn"><i
+							class="material-icons left">format_list_bulleted</i>Voltar
+							</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<th:block th:include="mensagemValidacao"></th:block>
+	<div class="container formEvento">
+
+		<form class="container" method="post">
+			<div class="row">
+				<div class="input-field col s6">
+					Primeiro Nome: <input type="text" value="" name="primeironome" />
+				</div>
+				<div class="input-field col s6">
+					Último Nome: <input type="text" value="" name="segundonome" />
+				</div>
+
+				<div class="input-field col s6">
+					Email: <input type="text" value="" name="email" />
+				</div>
+
+
+				<div class="input-field col s3">
+					Status: <input type="checkbox" value="" name="status" />
+					<p>
+						<input name="group1" type="radio" id="test1" /> Ativo:<label
+							for="test1">Sim</label>
+					</p>
+				</div>
+				<div class="input-field col s6">
+					<select>
+						<option value="1">DF</option>
+						<option value="2">MG</option>
+						<option value="3">SP</option>
+					</select> 
+					<label>Estado</label>
+				</div>
+				<div class="input-field col s6">
+					<select>
+						<option value="1">Brasilia</option>
+						<option value="2">Gama</option>
+						<option value="3">Sao Paulo</option>
+					</select> 
+					<label>Cidade</label>
+				</div>
+				<div class="input-field col s6">
+					<select>
+						<option value="1">Cardiologista</option>
+						<option value="2">Clinico Geral</option>
+						<option value="3">Ortopedia</option>
+					</select> 
+					<label>Especialidade</label>
+				</div>
+			</div>
+			<button class="waves-effect waves-light btn" type="submit">Salvar
+				Medico</button>
+			<button class="waves-effect waves-light btn" type="submit">Cancelar</button>
+		</form>
+	</div>
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	<script type="text/javascript">$('select').material_select();</script>
+</body>
+</html>
